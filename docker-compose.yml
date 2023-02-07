@@ -2,6 +2,7 @@
 version: '3'
 services:
     laravel.test:
+        container_name: laravel9-demo
         build:
             context: ./vendor/laravel/sail/runtimes/8.2
             dockerfile: Dockerfile

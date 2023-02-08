@@ -24,7 +24,12 @@ return new class extends Migration
             $table->string('flavor_text')->comment('説明');
             $table->string('img')->comment('画像');
             $table->smallInteger('generation')->comment('世代');
-            $table->json('status')->comment('ステータス[HP、攻撃、防御、特攻、特防、素早さ]');
+            $table->smallInteger('hp')->comment('HP');
+            $table->smallInteger('attack')->comment('攻撃');
+            $table->smallInteger('defense')->comment('防御');
+            $table->smallInteger('special_attack')->comment('特攻');
+            $table->smallInteger('special_defense')->comment('特防');
+            $table->smallInteger('speed')->comment('素早さ');
             $table->timestamps();
         });
     }

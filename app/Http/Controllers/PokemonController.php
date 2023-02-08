@@ -33,7 +33,12 @@ class PokemonController extends Controller
             $poke->type2 = $pokemon['type2'];
             $poke->height = $pokemon['height'];
             $poke->weight = $pokemon['weight'];
-            $poke->status = $pokemon['status'];
+            $poke->hp = $pokemon['status']['hp'];
+            $poke->attack = $pokemon['status']['attack'];
+            $poke->defense = $pokemon['status']['defense'];
+            $poke->special_attack = $pokemon['status']['special_attack'];
+            $poke->special_defense = $pokemon['status']['special_defense'];
+            $poke->speed = $pokemon['status']['speed'];
             $poke->flavor_text = $pokemon['flavor_text'];
             $poke->img = $pokemon['img'];
             $poke->generation = $pokemon['generation'];

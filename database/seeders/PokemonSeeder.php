@@ -25,16 +25,12 @@ class PokemonSeeder extends Seeder
             'flavor_text' => '生まれたときから　背中に\n不思議な　タネが　植えてあって\n体と　ともに　育つという。',
             'img' => 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png',
             'generation' => 1,
-            'status' =>  json_encode(
-                [
-                    'hp' => 100,
-                    'attack' => 100,
-                    'defense' => 100,
-                    'special_attack' => 100,
-                    'special_defense' => 100,
-                    'speed' => 100,
-                ],
-            ), 
+            'hp' => 100,
+            'attack' => 100,
+            'defense' => 100,
+            'special_attack' => 100,
+            'special_defense' => 100,
+            'speed' => 100,
             'created_at' => now(),
             'updated_at' => now(),
         ]);

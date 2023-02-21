@@ -2,10 +2,18 @@ import "../js/bootstrap";
 import "../css/app.css";
 import React from "react";
 import { createRoot } from 'react-dom/client';
+import Counter from "./components/Counter";
+import TestImg from "../img/test.png";
 
 const App = () => {
     const title: string = "Laravel 9 Vite with TypeScript React !!";
-    return <h1>{title}</h1>;
+    return (
+			<>
+				<h1>{title}</h1>
+				<img src={TestImg} />
+				<Counter />
+			</>
+		)
 };
 const container = document.getElementById('app') as HTMLInputElement;
 const root = createRoot(container);

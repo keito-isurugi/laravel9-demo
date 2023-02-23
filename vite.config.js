@@ -1,26 +1,14 @@
 import { defineConfig } from 'vite';
 import laravel from 'laravel-vite-plugin';
-import react from '@vitejs/plugin-react'
+import react from '@vitejs/plugin-react';
 
 export default defineConfig({
-    server: {
-        hmr: {
-            host: 'localhost',
-        },
-    },
     plugins: [
-        react(),
         laravel({
-            input: [
-                'resources/css/app.css', 
-                'resources/ts/app.tsx'
-            ],
+            input: 'resources/js/app.jsx',
+            ssr: 'resources/js/ssr.jsx',
             refresh: true,
         }),
+        react(),
     ],
-    resolve: {
-        alias: {
-            '@': '/resources/ts',
-        },
-    },
 });

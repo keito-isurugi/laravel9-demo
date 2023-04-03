@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\HelloController;
+use App\Http\Controllers\Codezine\HelloController;
+use App\Http\Controllers\Codezine\Demo6Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -28,9 +29,11 @@ use Inertia\Inertia;
 // Route::get('/hello', HelloController::class);
 Route::get('/hello', [HelloController::class, "foo"]);
 
-Route::get("/middlewareTest", function() {
+Route::get("/middlewareTest/{name}", function($name) {
 	return "<p>ミドルウェアのテスト。こちらはリクエスト処理。</p>";
-})->middleware("recordipaddress");
+})->middleware("recordipaddress:hogehoge");
+
+Route::get("/demo6/newNote", [Demo6Controller::class, 'newNote']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

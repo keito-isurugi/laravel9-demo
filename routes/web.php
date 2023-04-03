@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\HelloController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -20,10 +21,16 @@ use Inertia\Inertia;
 //     print("<p>hello world!".$name."</p>");
 //     return;
 // });
-Route::get('/hello', function() {
-    $data["name"] = 'hgoe';
-    return view('hello', $data);
-});
+// Route::get('/hello', function() {
+//     $data["name"] = 'hgoe';
+//     return view('hello', $data);
+// });
+// Route::get('/hello', HelloController::class);
+Route::get('/hello', [HelloController::class, "foo"]);
+
+Route::get("/middlewareTest", function() {
+	return "<p>ミドルウェアのテスト。こちらはリクエスト処理。</p>";
+})->middleware("recordipaddress");
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

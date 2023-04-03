@@ -16,6 +16,15 @@ use Inertia\Inertia;
 |
 */
 
+// Route::get('/hello/{name}', function($name) {
+//     print("<p>hello world!".$name."</p>");
+//     return;
+// });
+Route::get('/hello', function() {
+    $data["name"] = 'hgoe';
+    return view('hello', $data);
+});
+
 Route::get('/', function () {
     return Inertia::render('Welcome', [
         'canLogin' => Route::has('login'),

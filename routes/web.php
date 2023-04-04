@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Codezine\HelloController;
 use App\Http\Controllers\Codezine\Demo6Controller;
+use App\Http\Controllers\Codezine\Demo8Controller;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,6 +35,11 @@ Route::get("/middlewareTest/{name}", function($name) {
 })->middleware("recordipaddress:hogehoge");
 
 Route::get("/demo6/newNote", [Demo6Controller::class, 'newNote']);
+
+Route::get("/demo8/showInput", [Demo8Controller::class, 'showInput']);
+Route::post("/demo8/addData", [Demo8Controller::class, 'addData']);
+
+
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

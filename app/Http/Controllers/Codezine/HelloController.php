@@ -15,6 +15,6 @@ class HelloController extends Controller
 	public function foo() 
 	{
 		$data["name"] = "foo"; 
-		return view("hello", $data); 
+		return view("codezine.hello", $data); 
 	}
 }

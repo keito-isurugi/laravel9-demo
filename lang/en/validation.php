@@ -180,5 +180,11 @@ return [
     */
 
     'attributes' => [],
-
+	"numeric" => ":attribute は数値で入力してください。",
+	"required" => ":attribute の入力は必須です。",
+	"attributes" => [
+		"name" => "名前",
+		"height" => "身長",
+		"weight" => "体重"
+	],
 ];

@@ -196,6 +196,7 @@ return [
         App\Providers\RouteServiceProvider::class,
 
         App\Providers\Codezine\NoteServiceProvider::class,
+        App\Providers\Codezine\DemoAppServiceProvider::class,
     ],
 
     /*

@@ -2,9 +2,6 @@
 namespace App\Http\Controllers\Codezine;
 
 use App\Http\Controllers\Controller;
-use App\Codezine\Book;
-use App\Codezine\Magazine;
-use App\Codezine\Note;
 use Illuminate\Http\Request;
 
 class Demo8Controller extends Controller

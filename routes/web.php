@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Codezine\HelloController;
 use App\Http\Controllers\Codezine\Demo6Controller;
 use App\Http\Controllers\Codezine\Demo8Controller;
+use App\Http\Controllers\Codezine\Demo9Controller;
+use App\Http\Controllers\Codezine\ClassaController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -39,7 +41,13 @@ Route::get("/demo6/newNote", [Demo6Controller::class, 'newNote']);
 Route::get("/demo8/showInput", [Demo8Controller::class, 'showInput']);
 Route::post("/demo8/addData", [Demo8Controller::class, 'addData']);
 
+Route::get("/demo9/user", [Demo9Controller::class, 'user']);
+Route::get("/demo9/users", [Demo9Controller::class, 'users']);
+Route::get("/demo9/ormusers", [Demo9Controller::class, 'ormUsers']);
 
+Route::get("/normal_class_a", [ClassaController::class, 'classA']);
+Route::get("/static_class_a", [ClassaController::class, 'staticClassA']);
+Route::get("/facade_class_a", [ClassaController::class, 'facadeClassA']);
 
 Route::get('/', function () {
     return Inertia::render('Welcome', [

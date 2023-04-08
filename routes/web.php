@@ -30,6 +30,8 @@ use Inertia\Inertia;
 //     return view('hello', $data);
 // });
 // Route::get('/hello', HelloController::class);
+Route::get('/phpinfo', function() {phpinfo();});
+
 Route::get('/hello', [HelloController::class, "foo"]);
 
 Route::get("/middlewareTest/{name}", function($name) {
